@@ -1,0 +1,125 @@
+body {
+    margin: 0px;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background: #c1c2d3;
+    font-size: large;
+}
+
+/* for index.php css */
+
+h2 {
+    position: relative;
+    left: 210px;
+    color: #345494;
+    display: inline-block;
+}
+.wrapAll {
+    position: relative;
+    left: 200px;
+    margin-bottom: 20px;
+    font-size: larger;
+    display: inline-block;
+    border: 1px solid;
+    padding: 40px 90px 30px 50px;
+    background: #727854;
+}
+.contentHead {
+    color: goldenrod;
+}
+.optionlist div {
+   display: inline-block;
+   padding: 10px;
+    background: #212121;
+    opacity: 0.8;
+}
+.optionlist div:hover {
+    background: #1b4be9;   
+}
+/*
+#login {
+    padding: 15px;
+    background: #212121;
+    opacity: 0.8;
+}
+#login:hover {
+    background: #1b4be9;   
+}
+*/
+#register-wrap,#login-wrap {
+    margin-top: 2px;
+}
+input {
+    margin: 0px;
+    padding: 5px 7px;
+    border: 1px solid #707080;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 18px;
+}
+input:focus, input:active {
+    outline: none;
+}
+p {
+    margin: 4px;
+    padding: 0px;
+}
+.bottomline {
+    border-bottom: 1px solid;
+    display: inline-block;
+}
+.sign-up input {
+    margin: 0px;
+    padding: 5px 7px;
+    border: 1px solid #707080;
+    border-radius: 4px;
+    background: #a2b1f4;
+    width: 30%;
+}
+.sign-in input {
+    margin: 0px;
+    padding: 5px 7px;
+    border: 1px solid #707080;
+    border-radius: 4px;
+    background: #a2b1f4;
+    width: 30%;
+}
+
+/* for welcome.php css */
+
+.fname:first-letter {
+    font-size: 33px;
+    font-variant: small-caps;
+    
+}
+.intro {
+    position: absolute;
+    left: 12px;
+}
+.intro a {
+    position: fixed;
+    top: 8px;
+    right: 14px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 8px;
+    padding: 5px;
+    text-decoration: none;
+    color: green;
+    font-size: normal;
+    display: inline-block;
+}
+.intro a:hover {
+    color: #1b4be9;
+    -moz-transition:-o-transform 0.1s ease-in-out;
+    -webkit-transition:-webkit-transform 0.1s ease-in-out; 
+    -o-transition:-o-transform 0.1s ease-in-out;
+    -moz-transform:scale(1.1); /*scale up 0.3x as 1 is normal scale*/
+    -webkit-transform:scale(1.1);
+    -o-transform:scale(1.1);
+}
+div.content {
+    position: relative;
+    top: 290px;
+    text-align: center;
+}
