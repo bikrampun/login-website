@@ -1,6 +1,17 @@
 <?php session_start();
+//dbconnection.php connect to the host database.
+//require_once('connect.php');
 require_once('dbconnection.php');
 
+//check if session already started
+if(isset($_SESSION['id'])){
+    if ($_SESSION['id'] != 0) {
+        $host=$_SERVER['HTTP_HOST'];
+        $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+        header("location:http://$host$uri/welcome.php");
+        //header('location:welcome.php');
+    }
+}
 //Code for Registration 
 if(isset($_POST['signup']))
 {
@@ -63,7 +74,10 @@ if(isset($_POST['login']))
 		$_SESSION['login']=$_POST['uemail'];
 		$_SESSION['id']=$num['id'];
 		$_SESSION['name']=$num['fname'];
-		header("location: welcome.php");
+		$host=$_SERVER['HTTP_HOST'];
+        $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+        header("location:http://$host$uri/welcome.php");
+		//header("location: welcome.php");
 	}
 	else
 	{
@@ -81,6 +95,8 @@ if(isset($_POST['login']))
 	<meta charset="utf-8">
 	<title>Login System</title>
 	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<!-- icon in tab -->
+    <link rel="icon" href="assets/nepal.png">
 </head>
 <body onload="display1()">
 	<h2>Registration and Login System</h2>
@@ -107,7 +123,7 @@ if(isset($_POST['login']))
 				<p>Last Name </p>
 				<input type="text" class="text" value="" name="lname"  required>
 				<p>Email Address </p>
-				<input type="text" class="text" value="" name="email" required>
+				<input type="email" class="text" value="" name="email" required>
 				<p>Password </p>
 				<input type="password" value="" name="password" required>
 				<p>Contact No. </p>
@@ -121,7 +137,7 @@ if(isset($_POST['login']))
 		<div id="login-wrap">
 			<p class="bottomline">Please, Login</p>
 			<form class="login" action="" method="POST">
-				<input type="text" class="text" name="uemail" value="" placeholder="Enter your registered email" required><br>
+				<input type="email" class="text" name="uemail" value="" placeholder="Enter your registered email" required><br>
 				<input type="password" value="" name="upassword" placeholder="Enter valid password" required>
 				<div class="sign-in">
 					<input type="submit" name="login" value="LOG IN" >
